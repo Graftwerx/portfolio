@@ -6,9 +6,10 @@ import { Loader2 } from "lucide-react";
 
 export function Form() {
   return (
-    <form className="flex justify-between gap-4 flex-col md:flex-row">
+    <form className="flex flex-col md:flex-row gap-4 w-full">
       <Input
         type="text"
+        className="flex-grow md:w-[80%]"
         name="message"
         maxLength={80}
         minLength={2}
@@ -23,16 +24,14 @@ export function Form() {
 function SubmitButton() {
   const { pending } = useFormStatus();
 
-  return (
-    <>
-      {pending ? (
-        <Button disabled>
-          <Loader2 className="mr-2 h-4 w-4" />
-          please wait
-        </Button>
-      ) : (
-        <Button type="submit">sign for free</Button>
-      )}
-    </>
+  return pending ? (
+    <Button disabled className="md:w-[10%] shrink-0">
+      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+      please wait
+    </Button>
+  ) : (
+    <Button type="submit" className="md:w-[10%] shrink-0">
+      sign for free
+    </Button>
   );
 }
