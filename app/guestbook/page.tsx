@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 export default function GuestbookPage() {
   return (
@@ -41,7 +42,9 @@ function GuestBookForm() {
       />
 
       {/* Button ~10% width on desktop */}
-      <Button className="md:w-[10%] shrink-0">Sign</Button>
+      <RegisterLink>
+        <Button className="md:w-[10%] shrink-0">Sign</Button>
+      </RegisterLink>
     </div>
   );
 }
