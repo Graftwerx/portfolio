@@ -3,10 +3,11 @@ import { useFormStatus } from "react-dom";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Loader2 } from "lucide-react";
+import { postData } from "@/app/actions";
 
 export function Form() {
   return (
-    <form className="flex flex-col md:flex-row gap-4 w-full">
+    <form action={postData} className="flex flex-col md:flex-row gap-4 w-full">
       <Input
         type="text"
         className="flex-grow md:w-[80%]"
