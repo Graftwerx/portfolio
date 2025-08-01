@@ -1,5 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Form } from "@/components/Form";
+import {
+  GuestBookFormLoading,
+  LoadingMessages,
+} from "@/components/LoadingState";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { prisma } from "@/lib/prisma";
 import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { Suspense } from "react";
 
 async function getGuestbookEntry() {
   const data = await prisma.guestBookEntry.findMany({
@@ -38,9 +43,15 @@ export default function GuestbookPage() {
       <Card className="mt-10">
         <CardHeader className="flex flex-col w-full">
           <Label className="mb-1">Message</Label>
-          <GuestBookForm />
+          <Suspense fallback={GuestBookFormLoading()}>
+            {" "}
+            <GuestBookForm />
+          </Suspense>
+
           <ul className="pt-7 gap-y-5 flex flex-col">
-            <GuestbookEntries />
+            <Suspense fallback={LoadingMessages()}>
+              <GuestbookEntries />
+            </Suspense>
           </ul>
         </CardHeader>
       </Card>
