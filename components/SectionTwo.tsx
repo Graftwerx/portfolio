@@ -22,6 +22,34 @@ import pr from "../public/tech-icons/pr.svg";
 import ps from "../public/tech-icons/ps.svg";
 import notion from "../public/tech-icons/notion.svg";
 import micro from "../public/tech-icons/micro.svg";
+import twitter from "../public/twitter.svg";
+import insta from "../public/insta.svg";
+import linkedin from "../public/linkedin.svg";
+import { Button } from "./ui/button";
+
+const socials = [
+  {
+    id: 1,
+    icon: insta,
+    name: "Instagram",
+    handle: "@graftwerx",
+    link: "http://localhost:3000",
+  },
+  {
+    id: 2,
+    icon: twitter,
+    name: "X",
+    handle: "@graftwerx",
+    link: "http://localhost:3000",
+  },
+  {
+    id: 3,
+    icon: linkedin,
+    name: "Linkedin",
+    handle: "@graftwerx",
+    link: "http://localhost:3000",
+  },
+];
 
 const icons = [
   sketch,
@@ -44,7 +72,7 @@ const icons = [
 
 export function SectionTwo() {
   return (
-    <div className="max-w-7xl mx-auto mt-10 px-4">
+    <div className=" mx-auto mt-10 px-4">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
         {/* Image Column */}
         <div className="w-full relative col-span-1">
@@ -76,6 +104,26 @@ export function SectionTwo() {
               ))}
             </CardContent>
           </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-4">
+            {socials.map((item) => (
+              <Card
+                key={item.id}
+                className="p-2 flex flex-col items-center sm:items-start bg-gray-100 border-none"
+              >
+                <Image
+                  src={item.icon}
+                  alt="social icons"
+                  width={48}
+                  height={48}
+                />
+                <h1 className="text-2xl font-medium">{item.name}</h1>
+                <p className="text-muted-foreground">{item.handle}</p>
+                <Button className="mt-4" size={"sm"} asChild>
+                  <a href={item.link}>follow</a>
+                </Button>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>
