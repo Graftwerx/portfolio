@@ -52,7 +52,9 @@ export function Navbar() {
 
       {/* Right Actions */}
       <div className="flex items-center justify-end md:col-span-3 col-span-6">
-        <Button className="hidden sm:block">Reach out</Button>
+        <Button className="hidden sm:flex" asChild>
+          <a href="mailto:julitoninc@gmail.com">Reach Out</a>
+        </Button>
         <div className="sm:hidden">
           <MobileMenu />
         </div>

@@ -42,7 +42,22 @@ export default async function ProjectsPage() {
               />
             </div>
             <div className="mt-4">
-              <h2 className="font-medium text-lg">{item.title}</h2>
+              <h2 className="font-medium text-lg hover:underline">
+                {item.title}
+              </h2>
+              <p className="mt-1 text-muted-foreground line-clamp-3">
+                {item.description}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {item.tags.map((tagItem, index) => (
+                  <span
+                    key={index}
+                    className="inline-flex items-center rounded-md bg-primary/10 px-3 py-1.5 text-xs sm:text-sm font-medium text-primary ring-2 ring-inset ring-primary/20"
+                  >
+                    {tagItem}
+                  </span>
+                ))}
+              </div>
             </div>
           </a>
         ))}

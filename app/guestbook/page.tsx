@@ -101,7 +101,7 @@ async function GuestBookForm() {
 
       {/* Button ~10% width on desktop */}
       <RegisterLink>
-        <Button className="md:w-[10%] shrink-0">Sign</Button>
+        <Button className="shrink-0">Sign</Button>
       </RegisterLink>
     </div>
   );
