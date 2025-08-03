@@ -11,10 +11,10 @@ export function AboutSection() {
         <p className="mt-4 text-muted-foreground lg:text-lg">
           London born and bred, I am a software developer who loves creating
           beautiful, efficient and scalable web applications, from full Saas
-          apps, to static sites, implementing modern technology and frameworks.
-          I am committed to finding user-friendly-solutions that solve
-          real-world problems, achieved through a blend of creativity and
-          pragmatism.
+          apps, to static sites. I enjoy implementing modern technology and
+          frameworks. An avid listener, I am committed to finding
+          user-friendly-solutions that solve real-world problems, achieved
+          through a blend of creativity and pragmatism.
         </p>
         <a
           href="mailto:julitoninc@gmail.com"

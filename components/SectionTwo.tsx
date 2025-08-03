@@ -7,21 +7,25 @@ import {
   CardTitle,
 } from "./ui/card";
 import sketch from "../public/tech-icons/sketch.svg";
-import canva from "../public/tech-icons/canva.svg";
+import nextjs from "../public/tech-icons/nextjs.svg";
 import ai from "../public/tech-icons/ai.svg";
 import figma from "../public/tech-icons/figma.svg";
 import chatgpt from "../public/tech-icons/chatgpt.svg";
 import cloud from "../public/tech-icons/creativecloud.svg";
 import framer from "../public/tech-icons/framer.svg";
 import github from "../public/tech-icons/github.svg";
+import stripe from "../public/tech-icons/stripe.svg";
 import slack from "../public/tech-icons/slack.svg";
-import discord from "../public/tech-icons/discord.svg";
+import postgresql from "../public/tech-icons/postgresql.svg";
 import youtube from "../public/tech-icons/youtube.svg";
+import tailwindcss from "../public/tech-icons/tailwindcss.svg";
 import chrome from "../public/tech-icons/chrome.svg";
-import pr from "../public/tech-icons/pr.svg";
+import prisma from "../public/tech-icons/prisma.svg";
 import ps from "../public/tech-icons/ps.svg";
-import notion from "../public/tech-icons/notion.svg";
-import micro from "../public/tech-icons/micro.svg";
+import sanity from "../public/tech-icons/sanity.svg";
+import react from "../public/tech-icons/react.svg";
+import ae from "../public/tech-icons/ae.svg";
+import vercel from "../public/tech-icons/vercel.svg";
 import twitter from "../public/twitter.svg";
 import insta from "../public/insta.svg";
 import linkedin from "../public/linkedin.svg";
@@ -53,7 +57,7 @@ const socials = [
 
 const icons = [
   sketch,
-  canva,
+  nextjs,
   ai,
   figma,
   chatgpt,
@@ -61,13 +65,17 @@ const icons = [
   framer,
   github,
   slack,
-  discord,
+  postgresql,
   youtube,
   chrome,
-  pr,
+  prisma,
+  stripe,
+  tailwindcss,
   ps,
-  notion,
-  micro,
+  sanity,
+  react,
+  ae,
+  vercel,
 ];
 
 export function SectionTwo() {
@@ -98,8 +106,8 @@ export function SectionTwo() {
                   key={index}
                   src={item}
                   alt="icon"
-                  width={48}
-                  height={48}
+                  width={56}
+                  height={56}
                 />
               ))}
             </CardContent>
