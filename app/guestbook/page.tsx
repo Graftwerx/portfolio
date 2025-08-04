@@ -12,8 +12,10 @@ import { prisma } from "@/lib/prisma";
 import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Suspense } from "react";
+import { unstable_noStore as noStore } from "next/cache";
 
 async function getGuestbookEntry() {
+  noStore();
   const data = await prisma.guestBookEntry.findMany({
     select: {
       User: {
