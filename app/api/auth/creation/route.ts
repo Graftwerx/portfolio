@@ -30,5 +30,5 @@ export async function GET(){
             }
         })
     }
-    return NextResponse.redirect("https://portfolio-ten-topaz-2quuxxop17.vercel.app/guestbook")
+    return NextResponse.redirect("https://portfolio-git-master-jules-projects-879dde01.vercel.app/guestbook")
 }
