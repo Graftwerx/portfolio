@@ -30,5 +30,5 @@ export async function GET(){
             }
         })
     }
-    return NextResponse.redirect("http://localhost:3000/guestbook")
+    return NextResponse.redirect("https://portfolio-git-master-jules-projects-879dde01.vercel.app/guestbook")
 }
