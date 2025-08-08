@@ -29,7 +29,7 @@ export function Hero() {
         </a>
       </div>
       <Image
-        src={"/DSC_0233.JPG"}
+        src={"/pp2.jpg"}
         alt="me"
         width={450}
         height={300}
